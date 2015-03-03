@@ -180,4 +180,18 @@ public class Stage {
 		}
 
 	}
+
+    public  void suppressionStage (String id)   throws MonException
+    {
+
+        try
+        {
+            String mysql="";
+            mysql = "DELETE from stages where id =" + id +"" ;
+            DialogueBd.insertionBD(mysql);
+        }
+        catch(MonException  e)
+        {    throw e;
+        }
+    }
 }

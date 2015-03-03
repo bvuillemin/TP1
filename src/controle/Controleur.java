@@ -24,6 +24,8 @@ public class Controleur extends HttpServlet {
     private static final String CHERCHER_STAGE = "chercheStage";
     private static final String AJOUT_STAGE = "ajoutStage";
     private static final String MODIFIER_STAGE = "modifierStage";
+    private static final String SUPPRIMER_STAGE = "supprimerStage";
+    private static final String SUPPRESSION_STAGE = "suppressionStage";
     private static final String ERROR_PAGE = null;
 
     // le format est une combinaison de MM dd yyyy avec / ou �
@@ -95,6 +97,23 @@ public class Controleur extends HttpServlet {
                     destinationPage = "/Erreur.jsp";
                 }
                 break;
+            case SUPPRIMER_STAGE:
+                try {
+                    Stage unStage = new Stage();
+                    request.setAttribute("affichageListe", 1);
+                    listeStages = unStage.afficheStages();
+                    request.setAttribute("liste", listeStages);
+                    destinationPage = "/supprimerStages.jsp";
+
+                } catch (MonException e) {
+                    request.setAttribute("MesErreurs", e.getMessage());
+                    destinationPage = "/Erreur.jsp";
+                }break;
+            case SUPPRESSION_STAGE:
+                Stage unStage = new Stage();
+                unStage.suppressionStage(request.getParameter("id"));
+                destinationPage = "/index.jsp";
+
         }      // Redirection vers la page jsp appropriee
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(destinationPage);
         dispatcher.forward(request, response);
