@@ -180,4 +180,35 @@ public class Stage {
 		}
 
 	}
+
+    public  void suppressionStage (String id)   throws MonException
+    {
+
+        try
+        {
+            String mysql="";
+            mysql = "DELETE from stages where id =" + id +"" ;
+            DialogueBd.insertionBD(mysql);
+        }
+        catch(MonException  e)
+        {    throw e;
+        }
+    }
+
+    public  void modifierStage (String id)   throws MonException
+    {
+
+        try
+        {
+            String mysql="";
+            DateFormat dateFormatpers = new SimpleDateFormat("yyyy-MM-dd");
+            String dd = dateFormatpers.format(this.getDatedebut());
+            String df = dateFormatpers.format(this.getDatefin());
+            mysql = "UPDATE stages SET libelle = '" + this.getLibelle() + "', datedebut = '" + dd +" datefin = '" + df +"', nbplaces ='"+this.getNbplaces()+"', nbinscrits='"+this.getNbinscrits()+"' WHERE id =" + id +"";
+            DialogueBd.insertionBD(mysql);
+        }
+        catch(MonException  e)
+        {    throw e;
+        }
+    }
 }

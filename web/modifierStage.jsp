@@ -66,7 +66,7 @@
         <!-- Boutons Ajouter/Reset -->
         <tr>
             <td colspan="2">
-                <input type="submit" name="ajouter" value="Ajouter"/>
+                <input type="submit" name="editer" value="editer"/>
                 &nbsp;&nbsp;
                 <input type="reset" name="reset" value="Reset"/>
             </td>
