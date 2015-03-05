@@ -120,7 +120,12 @@ public class Controleur extends HttpServlet {
                     destinationPage = "/Erreur.jsp";
                 }break;
             case MODIFIER_STAGE:
-                request.setAttribute("stage", new Stage());
+                request.setAttribute("id", request.getParameter("id"));
+                request.setAttribute("libelle", request.getParameter("libelle"));
+                request.setAttribute("datedebut", request.getParameter("datedebut"));
+                request.setAttribute("datefin", request.getParameter("datefin"));
+                request.setAttribute("nbplaces", request.getParameter("nbplaces"));
+                request.setAttribute("nbinscrits", request.getParameter("nbinscrits"));
                 destinationPage = "/modifierStage.jsp";
                 break;
             case EDITER_STAGE:

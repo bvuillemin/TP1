@@ -52,6 +52,13 @@
             </td>
             <td><form method="post" action="Controleur" >
                 <input type="hidden" name="id" value="${item.id}" />
+                <input type="hidden" name="libelle" value="${item.libelle}" />
+                <input type="hidden" name="datedebut" value=<fmt:formatDate type="both" dateStyle="short"
+                                                                            timeStyle="short" value="${item.datedebut}" pattern="dd/MM/yyyy"/> />
+                <input type="hidden" name="datefin" value=<fmt:formatDate type="both" dateStyle="short"
+                                                                          timeStyle="short" value="${item.datefin}" pattern="dd/MM/yyyy"/> />
+                <input type="hidden" name="nbplaces" value="${item.nbplaces}" />
+                <input type="hidden" name="nbinscrits" value="${item.nbinscrits}" />
                 <input type="hidden" name="action" value="modifierStage"/>
                 <input type="submit" name="modifier" value="Modifier"/>
             </form>

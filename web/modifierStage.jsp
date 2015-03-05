@@ -35,33 +35,33 @@
 
 <form method="post" action="Controleur" onsubmit="return verif();">
     <input type="hidden" name="type" value="ajout" id="type"/>
-    <input type="hidden" name="action" value="ajoutStage"/>
+    <input type="hidden" name="action" value="modifierStage"/>
     <table>
         <!-- input fields -->
         <tr>
             <td>Numéro</td>
-            <td><input type="text" name="id" value="${stage.id}" id="id"/></td>
+            <td><input type="text" name="id" value="${id}" id="id"/></td>
         </tr>
         <tr>
             <td>Libellé</td>
-            <td><input type="text" name="libelle" value="${stage.libelle}" id="libelle"/></td>
+            <td><input type="text" name="libelle" value="${libelle}" id="libelle"/></td>
         </tr>
         <tr>
             <td>Date de début du stage</td>
-            <td><input type="text" name="datedebut" value="${stage.datedebut}" id="datedebut"/></td>
+            <td><input type="text" name="datedebut" value="${datedebut}" id="datedebut"/></td>
         </tr>
         <tr>
             <td>Date de fin de stage</td>
-            <td><input type="text" name="datefin" value="${stage.datefin}" id="datefin"/></td>
+            <td><input type="text" name="datefin" value="${datefin}" id="datefin"/></td>
         </tr>
 
         <tr>
             <td>Nombre de places</td>
-            <td><input type="text" name="nbplaces" value="${stage.nbplaces}" id="nbplaces"/></td>
+            <td><input type="text" name="nbplaces" value="${nbplaces}" id="nbplaces"/></td>
         </tr>
         <tr>
             <td>Nombre d'inscrits</td>
-            <td><input type="text" name="nbinscrits" value="${stage.nbinscrits}" id="nbinscrits"/></td>
+            <td><input type="text" name="nbinscrits" value="${nbinscrits}" id="nbinscrits"/></td>
         </tr>
         <!-- Boutons Ajouter/Reset -->
         <tr>
