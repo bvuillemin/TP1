@@ -35,7 +35,7 @@
 
 <form method="post" action="Controleur" onsubmit="return verif();">
     <input type="hidden" name="type" value="ajout" id="type"/>
-    <input type="hidden" name="action" value="modifierStage"/>
+    <input type="hidden" name="action" value="editerStage"/>
     <table>
         <!-- input fields -->
         <tr>

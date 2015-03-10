@@ -25,7 +25,6 @@ public class Controleur extends HttpServlet {
     private static final String AJOUT_STAGE = "ajoutStage";
     private static final String MODIFIER_STAGE = "modifierStage";
     private static final String EDITER_STAGE = "editerStage";
-    private static final String SUPPRIMER_STAGE = "supprimerStage";
     private static final String SUPPRESSION_STAGE = "suppressionStage";
     private static final String ERROR_PAGE = null;
 
@@ -98,22 +97,13 @@ public class Controleur extends HttpServlet {
                     destinationPage = "/Erreur.jsp";
                 }
                 break;
-            case SUPPRIMER_STAGE:
-                try {
-                    Stage unStage = new Stage();
-                    request.setAttribute("affichageListe", 1);
-                    listeStages = unStage.afficheStages();
-                    request.setAttribute("liste", listeStages);
-                    destinationPage = "/supprimerStages.jsp";
-
-                } catch (MonException e) {
-                    request.setAttribute("MesErreurs", e.getMessage());
-                    destinationPage = "/Erreur.jsp";
-                }break;
             case SUPPRESSION_STAGE:
                 try {
                     Stage unStage = new Stage();
                     unStage.suppressionStage(request.getParameter("id"));
+                    request.setAttribute("affichageListe", 1);
+                    listeStages = unStage.afficheStages();
+                    request.setAttribute("liste", listeStages);
                     destinationPage = "/afficherStages.jsp";
                 } catch (MonException e) {
                     request.setAttribute("MesErreurs", e.getMessage());
@@ -133,12 +123,15 @@ public class Controleur extends HttpServlet {
                     Stage unStage = new Stage();
                     unStage.setId(request.getParameter("id"));
                     unStage.setLibelle(request.getParameter("libelle"));
-                    unStage.setDatedebut(conversionChaineenDate(request.getParameter("datedebut"), "yyyy/MM/dd"));
-                    unStage.setDatefin(conversionChaineenDate(request.getParameter("datefin"), "yyyy/MM/dd"));
+                    unStage.setDatedebut(conversionChaineenDate(request.getParameter("datedebut"), "dd/MM/yyyy"));
+                    unStage.setDatefin(conversionChaineenDate(request.getParameter("datefin"), "dd/MM/yyyy"));
                     unStage.setNbplaces(Integer.parseInt(request.getParameter("nbplaces")));
                     unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbplaces"))).intValue());
                     unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbinscrits"))).intValue());
                     unStage.modifierStage(request.getParameter("id"));
+                    request.setAttribute("affichageListe", 1);
+                    listeStages = unStage.afficheStages();
+                    request.setAttribute("liste", listeStages);
                     destinationPage = "/afficherStages.jsp";
                 } catch (MonException e) {
                     request.setAttribute("MesErreurs", e.getMessage());

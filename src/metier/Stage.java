@@ -204,7 +204,7 @@ public class Stage {
             DateFormat dateFormatpers = new SimpleDateFormat("yyyy-MM-dd");
             String dd = dateFormatpers.format(this.getDatedebut());
             String df = dateFormatpers.format(this.getDatefin());
-            mysql = "UPDATE stages SET libelle = '" + this.getLibelle() + "', datedebut = '" + dd +" datefin = '" + df +"', nbplaces ='"+this.getNbplaces()+"', nbinscrits='"+this.getNbinscrits()+"' WHERE id =" + id +"";
+            mysql = "UPDATE stages SET libelle = '" + this.getLibelle() + "', datedebut = '" + dd +"', datefin = '" + df +"', nbplaces ='"+this.getNbplaces()+"', nbinscrits='"+this.getNbinscrits()+"' WHERE id =" + id +"";
             DialogueBd.insertionBD(mysql);
         }
         catch(MonException  e)
