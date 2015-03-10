@@ -28,50 +28,65 @@
     </script>
 </head>
 <body onLoad="Chargement();">
-<h1>Formulaire d'ajout d'un stage</h1>
+<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
+
+<h3>Formulaire d'ajout d'un stage</h3>
+
 <br>
 
 <input type="hidden" name="uneErreur" value="${MesErreurs}" id="id_erreur">
 
-<form method="post" action="Controleur" onsubmit="return verif();">
-    <input type="hidden" name="type" value="ajout" id="type"/>
-    <input type="hidden" name="action" value="ajoutStage"/>
-    <table>
+<form class="form-horizontal" method="post" action="Controleur" onsubmit="return verif();">
+    <fieldset>
+        <input type="hidden" name="type" value="ajout" id="type"/>
+        <input type="hidden" name="action" value="ajoutStage"/>
         <!-- input fields -->
-        <tr>
-            <td>Numéro</td>
-            <td><input type="text" name="id" value="${stage.id}" id="id"/></td>
-        </tr>
-        <tr>
-            <td>Libellé</td>
-            <td><input type="text" name="libelle" value="${stage.libelle}" id="libelle"/></td>
-        </tr>
-        <tr>
-            <td>Date de début du stage</td>
-            <td><input type="text" name="datedebut" value="${stage.datedebut}" id="datedebut"/></td>
-        </tr>
-        <tr>
-            <td>Date de fin de stage</td>
-            <td><input type="text" name="datefin" value="${stage.datefin}" id="datefin"/></td>
-        </tr>
+        <div class="control-group">
+            <label class="control-label" for="id">Numéro</label>
 
-        <tr>
-            <td>Nombre de places</td>
-            <td><input type="text" name="nbplaces" value="${stage.nbplaces}" id="nbplaces"/></td>
-        </tr>
-        <tr>
-            <td>Nombre d'inscrits</td>
-            <td><input type="text" name="nbinscrits" value="${stage.nbinscrits}" id="nbinscrits"/></td>
-        </tr>
+            <div class="controls">
+                <input type="text" name="id" value="${stage.id}" id="id">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="libelle">Libellé</label>
+
+            <div class="controls">
+                <input type="text" name="libelle" value="${stage.libelle}" id="libelle">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="datedebut">Date de début du stage</label>
+
+            <div class="controls">
+                <input type="text" name="datedebut" value="${stage.datedebut}" id="datedebut">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="datefin">Date de fin de stage</label>
+
+            <div class="controls">
+                <input type="text" name="datefin" value="${stage.datefin}" id="datefin">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="nbplaces">Nombre de places</label>
+
+            <div class="controls">
+                <input type="text" name="nbplaces" value="${stage.nbplaces}" id="nbplaces">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="nbinscrits">Nombre d'inscrits</label>
+
+            <div class="controls">
+                <input type="text" name="nbinscrits" value="${stage.nbinscrits}" id="nbinscrits">
+            </div>
+        </div>
         <!-- Boutons Ajouter/Reset -->
-        <tr>
-            <td colspan="2">
-                <input type="submit" name="ajouter" value="Ajouter"/>
-                &nbsp;&nbsp;
-                <input type="reset" name="reset" value="Reset"/>
-            </td>
-        </tr>
-    </table>
+        <button class="btn" type="submit" name="ajouter" value="Ajouter">Ajouter</button>
+        <button class="btn" type="reset" name="reset" value="Reset">Reset</button>
+    </fieldset>
 </form>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>

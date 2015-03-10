@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<P><A href="index.jsp">Retour Accueil</A></P>
+<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
 
-<P align="center"><STRONG>Recherche d'un Stage</STRONG></P>
+<h3>Recherche d'un Stage</h3>
 <input type="hidden" name="uneErreur" value="${MesErreurs}" id="id_erreur">
 
 <form method="post" action="Controleur?action=chercheStage">
-    <input type="text" name="recherche" id="recherche"/>
-    <input type="submit" name="rechercher" value="Rechercher"/>
+    <input class="input-medium search-query" type="text" name="recherche" id="recherche"/>
+    <button class="btn" type="submit" name="rechercher" value="Rechercher">Rechercher</button>
 </form>
 <c:if test="${resultats != null}">
-    <TABLE BORDER="1">
+    <TABLE class="table table-hover">
         <CAPTION> Résultat de la recherche pour "<c:out value="${resultats}"></c:out>"</CAPTION>
         <TR>
             <TH>Numéro</TH>

@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="../../../Downloads/TP1/web/WEB-INF/css/main.css"/>
 </head>
 <body>
-<P><A href="index.jsp">Retour Accueil</A></P>
+<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
 
-<P align="center">
-    <STRONG>Listing&nbsp;des Stages</STRONG></P>
+<h3>Listing des Stages</h3>
 
 <TABLE class="table table-hover">
-    <CAPTION> Tableau des Stages</CAPTION>
     <thead>
     <TR>
         <TH>Numero</TH>
