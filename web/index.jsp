@@ -6,8 +6,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Gestion des stages</title>
+    <link rel="stylesheet" href="WEB-INF/css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
 <H1> Gestion des Stages HIGH TECH </H1> <BR> <BR>

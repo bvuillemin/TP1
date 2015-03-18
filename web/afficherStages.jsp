@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Affichage des stages</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../Downloads/TP1/web/WEB-INF/css/main.css"/>
+    <link rel="stylesheet" href="WEB-INF/css/main.css"/>
 </head>
 <body>
 <P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
