@@ -54,8 +54,8 @@ public class Controleur extends HttpServlet {
                     Stage unStage = new Stage();
                     unStage.setId(request.getParameter("id"));
                     unStage.setLibelle(request.getParameter("libelle"));
-                    unStage.setDatedebut(conversionChaineenDate(request.getParameter("datedebut"), "yyyy/MM/dd"));
-                    unStage.setDatefin(conversionChaineenDate(request.getParameter("datefin"), "yyyy/MM/dd"));
+                    unStage.setDatedebut(conversionChaineenDate(request.getParameter("datedebut"), "dd/MM/yyyy"));
+                    unStage.setDatefin(conversionChaineenDate(request.getParameter("datefin"), "dd/MM/yyyy"));
                     unStage.setNbplaces(Integer.parseInt(request.getParameter("nbplaces")));
                     unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbplaces"))).intValue());
                     unStage.setNbinscrits(Integer.valueOf((request.getParameter("nbinscrits"))).intValue());
@@ -112,8 +112,12 @@ public class Controleur extends HttpServlet {
             case MODIFIER_STAGE:
                 request.setAttribute("id", request.getParameter("id"));
                 request.setAttribute("libelle", request.getParameter("libelle"));
-                request.setAttribute("datedebut", request.getParameter("datedebut"));
-                request.setAttribute("datefin", request.getParameter("datefin"));
+                String datedebut = request.getParameter("datedebut");
+                datedebut = datedebut.substring(0, datedebut.length() - 1);
+                String datefin = request.getParameter("datefin");
+                datefin = datefin.substring(0, datefin.length() - 1);
+                request.setAttribute("datedebut", datedebut);
+                request.setAttribute("datefin", datefin);
                 request.setAttribute("nbplaces", request.getParameter("nbplaces"));
                 request.setAttribute("nbinscrits", request.getParameter("nbinscrits"));
                 destinationPage = "/modifierStage.jsp";

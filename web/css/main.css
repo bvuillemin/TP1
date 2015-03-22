@@ -32,7 +32,6 @@ h1, h2, h3{
 }
 
 table{
-    background-color: gainsboro;
     text-align: center;
 }
 
@@ -45,7 +44,6 @@ table{
 
 fieldset{
     width: 40%;
-    background-color: gainsboro;
     text-align: center;
     margin-left: auto;
     margin-right: auto;

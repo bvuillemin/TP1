@@ -34,6 +34,8 @@
             <TH class="perso">Date fin</TH>
             <TH class="perso">Nombre de places</TH>
             <TH class="perso">Nombre d'inscrits</TH>
+            <TH class="perso">Modifier</TH>
+            <TH class="perso">Supprimer</TH>
         </TR>
 
         <c:forEach items="${liste}" var="item">
@@ -51,10 +53,36 @@
 
                 <td>${item.nbplaces}</td>
                 <td>${item.nbinscrits}</td>
+                <td>
+                    <form method="post" action="Controleur">
+                        <input type="hidden" name="id" value="${item.id}"/>
+                        <input type="hidden" name="libelle" value="${item.libelle}"/>
+                        <input type="hidden" name="datedebut" value=
+                                <fmt:formatDate type="both" dateStyle="short"
+                                                timeStyle="short" value="${item.datedebut}" pattern="dd/MM/yyyy"/>/>
+                        <input type="hidden" name="datefin" value=
+                                <fmt:formatDate type="both" dateStyle="short"
+                                                timeStyle="short" value="${item.datefin}" pattern="dd/MM/yyyy"/>/>
+                        <input type="hidden" name="nbplaces" value="${item.nbplaces}"/>
+                        <input type="hidden" name="nbinscrits" value="${item.nbinscrits}"/>
+                        <input type="hidden" name="action" value="modifierStage"/>
+                        <input class="btn btn-xs btn-default" type="submit" name="modifier" value="Modifier"/>
+                    </form>
+                </td>
+                <td>
+                    <form method="post" action="Controleur">
+                        <input type="hidden" name="id" value="${item.id}"/>
+                        <input type="hidden" name="action" value="suppressionStage"/>
+                        <input class="btn btn-xs btn-default" type="submit" name="supprimer" value="Supprimer"/>
+                    </form>
+                </td>
 
             </tr>
         </c:forEach>
     </TABLE>
 </c:if>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
