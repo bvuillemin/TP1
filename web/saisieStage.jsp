@@ -82,7 +82,7 @@
                     <label for="nbplaces" class="col-sm-4 control-label">Nombre de places</label>
 
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="nbplaces" value="${stage.nbplaces}" id="nbplaces"
+                        <input type="number" class="form-control" name="nbplaces" value="${stage.nbplaces}" id="nbplaces"
                                required>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     <label for="nbinscrits" class="col-sm-4 control-label">Nombre d'inscrits</label>
 
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="nbinscrits" value="${stage.nbinscrits}"
+                        <input type="number" class="form-control" name="nbinscrits" value="${stage.nbinscrits}"
                                id="nbinscrits" required>
                     </div>
                 </div>
