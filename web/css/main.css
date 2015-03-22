@@ -1,0 +1,29 @@
+
+h1{
+    text-align: center;
+}
+
+h3, h2{
+    margin-left: 5%;
+}
+
+.input-medium {
+    margin-left: 5%;
+}
+
+.form-horizontal {
+    margin-left: 5%;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.table {
+    text-align: center;
+}
+
+.tr {
+    text-align: center;
+}

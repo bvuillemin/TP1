@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Ajout d'un stage </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="WEB-INF/css/main.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 
     <script language=javascript>
         function verif() {
