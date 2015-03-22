@@ -28,8 +28,10 @@
     </script>
 </head>
 <body onLoad="Chargement();">
-<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A><A href="Controleur?action=afficheStage"
-                                                                 class="btn btn-info">Retour Affichage</A></P>
+<A href="index.jsp" class="btn btn-sm btn-default">
+    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+    <span class="glyphicon-class">Retour accueil</span>
+</A>
 
 <h3>Formulaire d'ajout d'un stage</h3>
 <br>
@@ -39,53 +41,56 @@
 <form class="form-horizontal" method="post" action="Controleur" onsubmit="return verif();">
     <fieldset>
         <input type="hidden" name="type" value="ajout" id="type"/>
-        <input type="hidden" name="action" value="editerStage"/>
+        <input type="hidden" name="action" value="ajoutStage"/>
         <!-- input fields -->
-        <div class="control-group">
-            <label class="control-label" for="id">Numéro</label>
-
-            <div class="controls">
-                <input type="text" name="id" value="${id}" id="id">
+        <div class="form-group">
+            <label for="id" class="col-sm-4
+             control-label">Numéro</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="id" value="${id}" id="id">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="libelle">Libellé</label>
-
-            <div class="controls">
-                <input type="text" name="libelle" value="${libelle}" id="libelle">
+        <div class="form-group">
+            <label for="libelle" class="col-sm-4
+             control-label">Libellé</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="libelle" value="${libelle}" id="libelle">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="datedebut">Date de début du stage</label>
-
-            <div class="controls">
-                <input type="text" name="datedebut" value="${datedebut}" id="datedebut">
+        <div class="form-group">
+            <label for="datedebut" class="col-sm-4
+             control-label">Date de début du stage</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="datedebut" value="${datedebut}" id="datedebut">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="datefin">Date de fin de stage</label>
-
-            <div class="controls">
-                <input type="text" name="datefin" value="${datefin}" id="datefin">
+        <div class="form-group">
+            <label for="datefin" class="col-sm-4
+             control-label">Date de fin de stage</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="datefin" value="${datefin}" id="datefin">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="nbplaces">Nombre de places</label>
-
-            <div class="controls">
-                <input type="text" name="nbplaces" value="${nbplaces}" id="nbplaces">
+        <div class="form-group">
+            <label for="nbplaces" class="col-sm-4
+             control-label">Nombre de places</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="nbplaces" value="${nbplaces}" id="nbplaces">
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="nbinscrits">Nombre d'inscrits</label>
-
-            <div class="controls">
-                <input type="text" name="nbinscrits" value="${nbinscrits}" id="nbinscrits">
+        <div class="form-group">
+            <label for="nbinscrits" class="col-sm-4
+             control-label">Nombre d'inscrits</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="nbinscrits" value="${nbinscrits}" id="nbinscrits">
             </div>
         </div>
         <!-- Boutons Ajouter/Reset -->
-        <button class="btn" type="submit" name="ajouter" value="Ajouter">Ajouter</button>
-        <button class="btn" type="reset" name="reset" value="Reset">Reset</button>
+        <div class="form-group">
+            <button class="btn btn-lg btn-default" type="submit" name="ajouter" value="Ajouter">Ajouter</button>
+            <button class="btn btn-lg btn-default" type="reset" name="reset" value="Reset">Reset</button>
+
+        </div>
     </fieldset>
 </form>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

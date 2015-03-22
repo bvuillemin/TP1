@@ -1,29 +1,57 @@
 
-h1{
+h1, h2, h3{
     text-align: center;
-}
-
-h3, h2{
-    margin-left: 5%;
 }
 
 .input-medium {
     margin-left: 5%;
 }
 
-.form-horizontal {
-    margin-left: 5%;
+.form-horizontal, .form {
+   text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.btn {
+.btn-sm{
     margin-top: 10px;
     margin-left: 2px;
 }
 
-.table {
+.btn-lg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.perso {
     text-align: center;
 }
 
-.tr {
+.control-label{
+    margin-left: 10%;
+}
+
+table{
+    background-color: gainsboro;
     text-align: center;
+}
+
+.recherche {
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset{
+    width: 40%;
+    background-color: gainsboro;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+dt {
+    margin-left: 25%;
+    margin-right: 50px;
 }

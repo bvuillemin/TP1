@@ -11,21 +11,23 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
-
+<A href="index.jsp" class="btn btn-sm btn-default">
+<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+<span class="glyphicon-class">Retour accueil</span>
+</A>
 <h3>Listing des Stages</h3>
 
-<TABLE class="table table-hover">
+<TABLE class="table table-striped">
     <thead>
     <TR>
-        <TH>Numero</TH>
-        <TH>Libellé</TH>
-        <TH>Date début</TH>
-        <TH>Date fin</TH>
-        <TH>Nombre de places</TH>
-        <TH>Nombre d'inscrits</TH>
-        <TH>Modifier</TH>
-        <TH>Supprimer</TH>
+        <TH class="perso">Numéro</TH>
+        <TH class="perso">Libellé</TH>
+        <TH class="perso">Date début</TH>
+        <TH class="perso">Date fin</TH>
+        <TH class="perso">Nombre de places</TH>
+        <TH class="perso">Nombre d'inscrits</TH>
+        <TH class="perso">Modifier</TH>
+        <TH class="perso">Supprimer</TH>
     </TR>
     <thead>
     <tbody>
@@ -57,14 +59,14 @@
                 <input type="hidden" name="nbplaces" value="${item.nbplaces}"/>
                 <input type="hidden" name="nbinscrits" value="${item.nbinscrits}"/>
                 <input type="hidden" name="action" value="modifierStage"/>
-                <input class="btn btn-warning" type="submit" name="modifier" value="Modifier"/>
+                <input class="btn btn-xs btn-default" type="submit" name="modifier" value="Modifier"/>
             </form>
         </td>
         <td>
             <form method="post" action="Controleur">
                 <input type="hidden" name="id" value="${item.id}"/>
                 <input type="hidden" name="action" value="suppressionStage"/>
-                <input class="btn btn-danger" type="submit" name="delete" value="Delete"/>
+                <input class="btn btn-xs btn-default" type="submit" name="delete" value="Delete"/>
             </form>
         </td>
 

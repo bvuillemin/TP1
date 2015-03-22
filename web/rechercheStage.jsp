@@ -11,25 +11,29 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<P><A href="index.jsp" class="btn btn-info">Retour Accueil</A></P>
-
+<A href="index.jsp" class="btn btn-sm btn-default">
+    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+    <span class="glyphicon-class">Retour accueil</span>
+</A>
 <h3>Recherche d'un Stage</h3>
 <input type="hidden" name="uneErreur" value="${MesErreurs}" id="id_erreur">
 
-<form method="post" action="Controleur?action=chercheStage">
+<form method="post" class="recherche" action="Controleur?action=chercheStage">
     <input class="input-medium search-query" type="text" name="recherche" id="recherche"/>
     <button class="btn" type="submit" name="rechercher" value="Rechercher">Rechercher</button>
 </form>
+
+
 <c:if test="${resultats != null}">
-    <TABLE class="table table-hover">
+    <TABLE class="table table-striped">
         <CAPTION> Résultat de la recherche pour "<c:out value="${resultats}"></c:out>"</CAPTION>
         <TR>
-            <TH>Numéro</TH>
-            <TH>Libellé</TH>
-            <TH>Date début</TH>
-            <TH>Date fin</TH>
-            <TH>Nombre de places</TH>
-            <TH>Nombre d'inscrits</TH>
+            <TH class="perso">Numéro</TH>
+            <TH class="perso">Libellé</TH>
+            <TH class="perso">Date début</TH>
+            <TH class="perso">Date fin</TH>
+            <TH class="perso">Nombre de places</TH>
+            <TH class="perso">Nombre d'inscrits</TH>
         </TR>
 
         <c:forEach items="${liste}" var="item">
